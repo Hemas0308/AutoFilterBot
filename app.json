@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/EvamariaTG/EvaMaria",
-    "repository": "https://github.com/EvamariaTG/EvaMaria",
+    "website": "https://github.com/Hemas0308/AutoFilterBot",
+    "repository": "https://github.com/Hemas0308/AutoFilterBot",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
