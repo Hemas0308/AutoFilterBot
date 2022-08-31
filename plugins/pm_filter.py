@@ -128,7 +128,7 @@ async def next_page(bot, query):
 
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("oKda", show_alert=True)
+        return await query.answer("நீங்கள் தேடி இருந்தால் மட்டுமே அடுத்த பக்கம் செல்ல இயலும் ", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -201,7 +201,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("ok Da 😏", show_alert=True)
+        return await query.answer("நீங்கள் தேடி இருந்தால் மட்டுமே அடுத்த பக்கம் செல்ல இயலும் ", show_alert=True)
     if movie_  == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
@@ -446,12 +446,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     file_id=file_id,
                     caption=f_caption
                     )
-                await query.answer('தனி உரையாடலில் அனுப்பப்பட்டது 🥳. பதிவிறக்கம் செய்து கொள்ளலாம் 📥',show_alert = True)
+                await query.answer('ரோபோ மூலம் தனி உரையாடலில் அனுப்பப்பட்டுள்ளது 🥳. தரவிறக்கம் செய்து கொள்ளுங்கள் 📥. நன்றி 🙏 ',show_alert = True)
                 await asyncio.sleep(600)
                 await y.delete()
 
         except UserIsBlocked:
-            await query.answer('Unblock the bot mahn !',show_alert = True)
+            await query.answer('ரோபோ தடை செய்யப் பட்டுள்ளது. தடையை நீக்குங்கள்  !',show_alert = True)
         except PeerIdInvalid:
             await query.answer(url=f"https://t.me/{temp.U_NAME}?start={file_id}")
         except Exception as e:
@@ -459,7 +459,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data.startswith("checksub"):
         if AUTH_CHANNEL and not await is_subscribed(client, query):
-            await query.answer("I Like Your Smartness, But Don't Be Oversmart 😒",show_alert=True)
+            await query.answer("இவரு பெரிய அறிவாளி 🤬. தடையை நீக்காமல் குழுவில் இணைய இயலாது 😒",show_alert=True)
             return
         ident, file_id = query.data.split("#")
         files_ = await get_file_details(file_id)
@@ -493,7 +493,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/Tamil_Astrology')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/aedahamlibrarychanneltwo')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
@@ -523,7 +523,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/Tamil_Astrology'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/aedahamlibrarychanneltwo'),
             InlineKeyboardButton('♥️ Source', callback_data='source')
             ],[
             InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -732,7 +732,7 @@ async def auto_filter(client, msg, spoll=False):
             url = imdb['url']
         )
     else:
-        cap = f"உங்களது தேடுதலுக்கான 📚 {search}  கீழே👇\n\n\n இவை 10 நிமிடம் ⏰ மட்டுமே குழுவில் இருக்கும், பிறகு நீக்கப்பட்டுவிடும்🗑. உடனே டவுன்லோட் 📥 செய்துகொள்ளவும்📣."
+        cap = f"உங்கள் தேடலுக்கான முடிவு இங்கே உள்ளதுு 📚 {search}  கீழே👇\n\n\n இவை 10 நிமிடம் ⏰ மட்டுமே குழுவில் இருக்கும், பிறகு நீக்கப்பட்டுவிடும்🗑. உடனே டவுன்லோட் 📥 செய்துகொள்ளவும்📣."
     if imdb and imdb.get('poster'):
         try:
             a = await message.reply_photo(photo=imdb.get('poster'), caption=cap, reply_markup=InlineKeyboardMarkup(btn))
@@ -794,7 +794,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply("நீங்கள் தேடும் நூலின் பெயர் அல்லது ஆசிரியர் பெயரை மட்டும் எழுதுங்கள்.")
+        k = await msg.reply("நீங்கள் தேடும் நூல் அல்லது ஆசிரியரின் பெயருடன் pdf என்று சேர்த்து தேடுங்கள்..")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -811,8 +811,8 @@ async def advantage_spell_chok(msg):
 def get_reply_markup(query): 
     buttons = [ 
         [ 
-            InlineKeyboardButton('Group', url='https://t.me/Tamilt'), 
-            InlineKeyboardButton('Channel', url='https://t.me/tamilbots') 
+            InlineKeyboardButton('Group', url='https://telegram.me/aedahamlibrary_noolagam'), 
+            InlineKeyboardButton('Channel', url='https://t.me/aedahamlibrarychanneltwo') 
         ] 
         ] 
     return InlineKeyboardMarkup(buttons)
