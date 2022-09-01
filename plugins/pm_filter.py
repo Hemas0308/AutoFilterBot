@@ -128,7 +128,7 @@ async def next_page(bot, query):
 
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("நீங்கள் தேடி இருந்தால் மட்டுமே அடுத்த பக்கம் செல்ல இயலும் ", show_alert=True)
+        return await query.answer("Neengal theda vendum", show_alert=True)
     try:
         offset = int(offset)
     except:
@@ -201,7 +201,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("நீங்கள் தேடி இருந்தால் மட்டுமே அடுத்த பக்கம் செல்ல இயலும் ", show_alert=True)
+        return await query.answer("Neengal theda vendum", show_alert=True)
     if movie_  == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
@@ -493,7 +493,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/aedahamlibrarychanneltwo')
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/aedahamlibrarychannel')
             ],[
             InlineKeyboardButton('ℹ️ Help', callback_data='help'),
             InlineKeyboardButton('😊 About', callback_data='about')
@@ -523,7 +523,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons= [[
-            InlineKeyboardButton('🤖 Updates', url='https://t.me/aedahamlibrarychanneltwo'),
+            InlineKeyboardButton('🤖 Updates', url='https://t.me/aedahamlibrarychannel'),
             InlineKeyboardButton('♥️ Source', callback_data='source')
             ],[
             InlineKeyboardButton('🏠 Home', callback_data='start'),
@@ -794,7 +794,7 @@ async def advantage_spell_chok(msg):
     movielist += [(re.sub(r'(\-|\(|\)|_)', '', i, flags=re.IGNORECASE)).strip() for i in gs_parsed]
     movielist = list(dict.fromkeys(movielist)) # removing duplicates
     if not movielist:
-        k = await msg.reply("நீங்கள் தேடும் நூல் அல்லது ஆசிரியரின் பெயருடன் pdf என்று சேர்த்து தேடுங்கள்..")
+        k = await msg.reply("நீங்கள் தேடும் நூல் அல்லது ஆசிரியரின் பெயருடன் pdf என்று சேர்த்து தேடுங்கள்")
         await asyncio.sleep(8)
         await k.delete()
         return
@@ -812,7 +812,7 @@ def get_reply_markup(query):
     buttons = [ 
         [ 
             InlineKeyboardButton('Group', url='https://telegram.me/aedahamlibrary_noolagam'), 
-            InlineKeyboardButton('Channel', url='https://t.me/aedahamlibrarychanneltwo') 
+            InlineKeyboardButton('Channel', url='https://t.me/aedahamlibrarychannel') 
         ] 
         ] 
     return InlineKeyboardMarkup(buttons)
