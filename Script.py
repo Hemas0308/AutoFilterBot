@@ -7,13 +7,13 @@ class script(object):
 │
 ├<b>🤖 Bot Name : <a href='https://t.me/Hkemas_bot'>📚 நூலக உதவியாளர்  🇮🇳</a></b>
 │
-├<b>📢 Update Channel : <a href='https://t.me/aedahamlibrarychanneltwo'>பிரதிக் குழு 🇮🇳</a></b>
+├<b>📢 Update Channel : <a href='https://t.me/aedahamlibrarychannel'>பிரதிக் குழு 🇮🇳</a></b>
 │
 ├<b>👥 Support Channel : <a href='https://t.me/aedahamlibrarynoolaham'>📚 ஏடகம் Library நூலகம் 📚</a></b>
 │
 ├<b>👨‍💻 Developer : <a href='https://t.me/kaimudinjavai'>படிபெருக்கி</a></b>
 │
-├<b>🚸 Admin Contact : <a href='https://t.me/AedahamLibraryBot'>Admin Message 🇮🇳</a></b>
+├<b>🚸 Admin Contact : <a href='https://t.me/kaimudinjavai'>Admin Contact 🇮🇳</a></b>
 │
 ╰──────[Thanks 😊]───⍟"""
     SOURCE_TXT = """<b>NOTE:</b>
