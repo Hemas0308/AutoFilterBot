@@ -39,7 +39,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Support 🇮🇳', url='https://t.me/aedahamlibrarychannel')
+            InlineKeyboardButton('Support 🇮🇳', url='https://t.me/aedahamlibrarynoolaham')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🤖 Updates', url='https://t.me/aedahamlibrarychannel')
@@ -82,7 +82,7 @@ async def start(client, message):
         buttons = [[
             InlineKeyboardButton('➕ Add Me To Your Groups ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
             ],[
-            InlineKeyboardButton('Support �', url='https://t.me/aedahamlibrarychannel')
+            InlineKeyboardButton('Support �', url='https://t.me/aedahamlibrarynoolaham')
             ],[
             InlineKeyboardButton('🔍 Search', switch_inline_query_current_chat=''),
             InlineKeyboardButton('🤖 Updates', url='https://t.me/aedahamlibrarychannel')
